@@ -1,0 +1,23 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    h2, h3 {
+        font-size: 6vw;
+        color: #020202;
+        text-transform: uppercase;
+        margin-bottom: 35px;
+    }
+}
+
+//
+//  tablet - 768px
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    h2, h3 {
+        font-size: 3vw;
+        margin-bottom: 90px;
+    }
+}

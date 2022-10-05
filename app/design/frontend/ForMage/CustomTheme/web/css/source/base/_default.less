@@ -1,0 +1,32 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    * {
+        letter-spacing: 1px;
+    }
+
+    .action.primary {
+        border-radius: 150px;
+        width: 100% !important;
+        transition: all .5s ease;
+    }
+
+    .navs {
+        .link {
+            text-decoration: none;
+            background-image: linear-gradient(#fff,#fff);
+            background-position: left bottom;
+            background-size: 0% 2px;
+            background-repeat: no-repeat;
+            transition: background-size 0.5s;
+
+            &:hover:not(.store) {
+                background-size: 100% 2px;
+                text-decoration: none;
+            }
+        }
+    }
+}

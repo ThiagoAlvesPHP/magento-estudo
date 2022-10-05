@@ -1,0 +1,56 @@
+// /**
+//  * Copyright © 2016 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Common
+//  _____________________________________________
+
+.lib-ttf-font-face(
+    @family-name,
+    @font-path,
+    @font-weight: normal,
+    @font-style: normal
+) {
+    @font-face{
+        font-family: @family-name;
+        src: url('@{font-path}.ttf') format('truetype');
+        font-weight: @font-weight;
+        font-style: @font-style;
+    }
+}
+
+& when (@media-common = true) {
+
+    // FONTE DASASANS
+    .lib-ttf-font-face(
+        @family-name: 'DIN',
+        @font-path: '@{baseDir}fonts/din/DINBOLD',
+        @font-weight: 600,
+        @font-style: normal
+    );
+
+    // FONTE Barlow
+    .lib-ttf-font-face(
+        @family-name: 'HUMNST777',
+        @font-path: '@{baseDir}fonts/humnst777/HUMNST777-CN-BT',
+        @font-weight: 400,
+        @font-style: normal
+    );
+
+    .lib-ttf-font-face(
+        @family-name: 'HUMNST777',
+        @font-path: '@{baseDir}fonts/humnst777/HUMNST777-CN-BT-BOLD',
+        @font-weight: 600,
+        @font-style: normal
+    );
+
+    .lib-ttf-font-face(
+        @family-name: 'HUMNST777',
+        @font-path: '@{baseDir}fonts/humnst777/HUMNST777-BLK-BT-BLACK-ITALIC',
+        @font-weight: 400,
+        @font-style: italic
+    );
+
+}

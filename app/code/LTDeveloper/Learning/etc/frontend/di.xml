@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="LTDeveloper\Learning\Api\SizeInterface" type="LTDeveloper\Learning\Model\SizeSmall" />
+    <preference for="LTDeveloper\Learning\Api\ColorInterface" type="LTDeveloper\Learning\Model\ColorWhite" />
+
+    <type name="LTDeveloper\Learning\Model\Product\Shoe">
+        <arguments>
+            <argument name="color" xsi:type="object">LTDeveloper\Learning\Model\ColorBlack</argument>
+            <argument name="size" xsi:type="object">LTDeveloper\Learning\Model\SizeGreat</argument>
+        </arguments>
+    </type>
+
+    <type name="LTDeveloper\Learning\Model\Product\Shirt">
+        <arguments>
+            <argument name="typeText" xsi:type="string">MY CUSTOM IN ARGUMENT TYPE</argument>
+            <argument name="typeNumber" xsi:type="number">2023</argument>
+            <argument name="typeArray" xsi:type="array">
+                <item name="customName" xsi:type="string">Alves</item>
+                <item name="customColor" xsi:type="string">Blue</item>
+            </argument>
+            <argument name="typeInitParameter" xsi:type="init_parameter">LTDeveloper\Learning\Model\Product\Shirt::MY_CONSTANT</argument>
+        </arguments>
+    </type>
+
+</config>
